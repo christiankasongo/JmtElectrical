@@ -14,59 +14,9 @@
             </article>
         </main>
     </div>*@
-
-
-
 <header class="sticky-top">
-    <nav class="navbar navbar-expand-md bg-dark">
-        <div class="container">
-            <a class="d-md-none navbar-brand" href="#">
-                <img height="48" role="img" src="img/logo.png" alt="JMT Logo" />
-            </a>
-
-            <button class="navbar-toggler shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExpand" aria-controls="navbarsExpand" aria-expanded="false" aria-label="Toggle navigation">
-                <box-icon name='menu' color='#fafafa'></box-icon>
-            </button>
-
-            <div class="collapse navbar-collapse d-md-flex" id="navbarsExpand">
-
-                <a class="hidden-mobile navbar-brand col-md me-0" href="#">
-                    <img height="48" role="img" src="img/logo.png" alt="JMT Logo" />
-                </a>
-                <ul class="navbar-nav col-md justify-content-md-center">
-                    <NavLink>
-                        <li><a href="#" class="nav-link active px-2" aria-current="page">Home</a></li>
-                    </NavLink>
-
-                    <NavLink class="nav-link" href="counter">
-                        <span class="oi oi-plus" aria-hidden="true"></span> Counter
-                    </NavLink>
-
-                    @*<li><a href="counter" class="nav-link px-2">Services</a></li>
-                        <li><a href="#" class="nav-link px-2">About</a></li>
-                        <li><a href="#" class="nav-link px-2">Projects</a></li>
-                        <li><a href="#" class="nav-link px-2">Contact</a></li>*@
-
-
-                </ul>
-                <div class="d-md-flex col-md justify-content-md-end">
-                    <a href="/" class="px-2 text-light text-decoration-none">
-                        <box-icon name='instagram' type='logo' color='#fafafa'></box-icon>
-                    </a>
-                    <a href="/" class="px-2 text-light text-decoration-none">
-                        <box-icon type='logo' name='facebook-circle' color='#fafafa'></box-icon>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </nav>
+    <NavMenu/>
 </header>
 <main>
-    <div class="top-row px-4">
-        <a href="https://docs.microsoft.com/aspnet/" target="_blank">About</a>
-    </div>
-
-    <article class="content px-4">
-        @Body
-    </article>
+    @Body
 </main>
