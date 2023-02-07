@@ -91,15 +91,13 @@ a.nav-link.active {
 /*#endregion */
 
 .hero {
-    background-image: url('/img/landingImg.jpg');
-    background-repeat: no-repeat;
-    background-position: center top;
-    background-size: cover;
-    opacity: 0.5;
+    background-color: linear-gradient(109.6deg, rgba(0, 0, 0, 0.93) 11.2%, rgb(63, 61, 61) 78.9%);
 
-    .inner-text {
-        color: var(--white);
-    }
+    background-image: url('/img/landingImg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    /*background-color: #6A93CB;*/
+    color: var(--white);
 }
 
 
