@@ -1,0 +1,15 @@
+{
+  "name": "jmt",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "npx sass --style=compressed ./wwwroot/css/app.scss ./wwwroot/css/app.css",
+    "sass:watch": "npx sass --watch --style=compressed ./wwwroot/css/app.scss ./wwwroot/css/app.css"
+  },
+  "author": "Christian Kasongo",
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^1.58.0"
+  }
+}
