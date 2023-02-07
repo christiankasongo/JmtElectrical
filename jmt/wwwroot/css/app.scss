@@ -3,9 +3,8 @@
 :root {
     --primary: #8bcbf2;
     --primary-dark: #6ca1bc;
-    --white:#f5f5f5;
-    --black:#2c2b2b;
-
+    --white: #f5f5f5;
+    --black: #2c2b2b;
     scroll-behavior: smooth;
 }
 
@@ -54,8 +53,6 @@ btn-outline-secondary {
     height: 100%;
     z-index: 999999;
     pointer-events: none;
-    animation-duration: var(--loadtime);
-    animation-timing-function: ease-out;
 
     .logo-div {
         position: fixed;
@@ -63,32 +60,6 @@ btn-outline-secondary {
         top: 40%;
         transform: translate(-50%, -50%);
         margin: 0 auto;
-    }
-}
-
-#app-splash-screen.fade-out {
-    opacity: 0;
-    animation-name: fade-out;
-    -webkit-animation-name: fadeOut;
-}
-
-@keyframes fade-out {
-    from {
-        opacity: 1
-    }
-
-    to {
-        opacity: 0
-    }
-}
-
-@-webkit-keyframes fadeOut {
-    from {
-        opacity: 1;
-    }
-
-    to {
-        opacity: 0;
     }
 }
 
@@ -115,6 +86,25 @@ a.nav-link.active {
 }
 
 /*#endregion */
+
+/*#region Change name */
+/*#endregion */
+
+.hero {
+    background-image: url('/img/landingImg.jpg');
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+    opacity: 0.5;
+
+    .inner-text {
+        color: var(--white);
+    }
+}
+
+
+
+
 
 
 
