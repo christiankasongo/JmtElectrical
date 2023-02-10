@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       # Checkout the code
-      - uses: actions/setup-dotnet@v3.0.3
+      - uses: actions/checkout@v2
 
       # Install .NET Core SDK
       - name: Setup .NET Core
@@ -30,8 +30,8 @@ jobs:
         run: dotnet publish Web/Web.csproj -c:Release -p:GHPages=true -o dist/Web --nologo
 
       - name: Commit wwwroot to GitHub Pages
-        uses: christiankasongo/github-pages-deploy-action@3.7.1
+        uses: christiankasongo/JmtElectrical
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          BRANCH: gh-pages
+          BRANCH: JmtElectrical
           FOLDER: dist/Web/wwwroot
