@@ -7,8 +7,10 @@
     --secondary-dark:#969a9d;
     --white: #bcbcbc;
     --black: #212529;
+    --lightgray:#ebebeb;
+    --darkgray:#6b7e86;
 
-    --lightbg:#ebebeb;
+    --lightbg:#f5f5f5;
     scroll-behavior: smooth;
 }
 
@@ -125,7 +127,6 @@ a.nav-link.active {
 /*#endregion */
 
 
-
 .hero {
     background: linear-gradient(to bottom, rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url("/img/landingImg.jpg") center no-repeat;
     background-size: cover;
@@ -155,29 +156,56 @@ a.nav-link.active {
 
 .features {
     background-color: var(--lightbg);
-    color: var(--black);
 
-    h3 {
-        color: var(--primary-dark);
-        font-size: 24px;
+    .card {
+        background: var(--lightgray);
+        border: none;
+        height: 100%;
+    }
+
+    .card-text{
+        color:var(--black);
     }
 
     .card-title {
-        color: var(--primary-dark);
+        color:var(--darkgray);
         font-weight: 600;
-        font-size: 20px;
+        font-size: 18px;
     }
 
     i {
-        color: var(--secondary-dark);
-        font-size: 40px;
+        color: var(--primary-dark);
+        font-size: 30px;
     }
 
-    .card-img-top{
-        max-width:10%;
-        height:auto;
+    .card-img-top {
+        max-width: 10%;
+        height: auto;
     }
 }
+
+
+
+
+
+.seperator {
+    margin: 25px auto 30px;
+    padding: 0;
+    border: 0;
+    border-top: solid 3px;
+    text-align: center;
+}
+
+.seperator:after {
+    content: "§"; /* section sign */
+    color: #999;
+    display: inline; /* for vertical centering and background knockout */
+    background-color: #454545; /* same as background color */
+    padding: 0 0.5em; /* size of background color knockout */
+}
+
+
+
 
 
 /*#region Media queries */
