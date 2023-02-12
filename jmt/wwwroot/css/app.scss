@@ -126,7 +126,7 @@ a.nav-link.active {
 
 /*#endregion */
 
-
+/*#region Landing section */
 .hero {
     background: linear-gradient(to bottom, rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url("/img/landingImg.jpg") center no-repeat;
     background-size: cover;
@@ -149,11 +149,12 @@ a.nav-link.active {
 
     p {
         line-height: 1.1em;
-        font-size:16px;
+        font-size: 16px;
     }
 }
+/*#endregion */
 
-
+/*#region Feature section */
 .features {
     background-color: var(--lightbg);
 
@@ -163,12 +164,12 @@ a.nav-link.active {
         height: 100%;
     }
 
-    .card-text{
-        color:var(--black);
+    .card-text {
+        color: var(--black);
     }
 
     .card-title {
-        color:var(--darkgray);
+        color: var(--darkgray);
         font-weight: 600;
         font-size: 18px;
     }
@@ -185,26 +186,50 @@ a.nav-link.active {
 }
 
 
-
-
-
-.seperator {
-    margin: 25px auto 30px;
-    padding: 0;
-    border: 0;
-    border-top: solid 3px;
-    text-align: center;
+.custom-shape-divider-bottom-1676197177 .shape-fill {
+    fill: #212529;
 }
 
-.seperator:after {
-    content: "§"; /* section sign */
-    color: #999;
-    display: inline; /* for vertical centering and background knockout */
-    background-color: #454545; /* same as background color */
-    padding: 0 0.5em; /* size of background color knockout */
+.custom-shape-divider-bottom-1676197177 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 60px;
 }
 
+.custom-shape-divider-bottom-1676197177 {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+/*#endregion */
 
+/*#region Service section */
+.service-section {
+
+    h3 {
+        font-size: 28px;
+    }
+
+    .seperator {
+        text-align: center;
+
+        span {
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .outer-line {
+            width: 40%;
+            border-bottom: 3px solid var(--white);
+        }
+    }
+}
+
+/*#endregion */
 
 
 
@@ -233,10 +258,6 @@ a.nav-link.active {
 
 /*#region Change name */
 /*#endregion */
-
-
-
-
 
 
 
