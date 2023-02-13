@@ -1,5 +1,7 @@
 ﻿@page "/"
 
+@using jmt.Components;
+
 <section class="hero position-relative overflow-hidden p-3 p-md-5 text-center">
     <div class="px-4 py-5">
         <span class="highlight">Welcome to</span>
@@ -70,13 +72,12 @@
     </div>
 </section>
 
-
 <section id="services" class="service-section">
     <div class="container px-4 py-4">
         <h3 class="display-5 text-center">Services</h3>
         <div class="seperator">
             <span class="outer-line"></span>
-            <span class="fa-solid fa-bolt" aria-hidden="true"></span>
+            <span class="fa-solid fa-bolt fa-fade" aria-hidden="true"></span>
             <span class="outer-line"></span>
         </div>
 
@@ -122,8 +123,7 @@
     </div>
 </section>
 
-
-<section id="about" class="about-section position-relative">
+<section id="about" class="about-section">
     <div class="container px-4 py-4 text-center">
         <h3 class="display-5 mb-3">About Us</h3>
         <div class="row g-2 row-cols-1 row-cols-lg-2 align-items-center">
@@ -138,24 +138,41 @@
             </div>
         </div>
     </div>
+</section>
+
+<section id="projects" class="project-section">
+    <div class="container px-4 py-4 text-center">
+        <h3 class="display-5">Projects</h3>
+        <div class="seperator">
+            <span class="outer-line"></span>
+            <span class="fa-solid fa-bolt fa-fade" aria-hidden="true"></span>
+            <span class="outer-line"></span>
+        </div>
+        
+        <p class="text-center">
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+        </p>
+
+        <iframe class="insta-frame" src="http://instagram.com/p/qbq6fIJMVZ/embed" frameborder="0"></iframe>
+
+    </div>
+</section>
+
+<section class="testimonal-section position-relative">
+    <div class="container px-4 py-4">
+        <h3 class="display-5 text-center">Testimonials</h3>
+
+        <div class="card border-0">
+            <div class="card-body px-3 py-3">
+                <Testimonials/>
+            </div>
+        </div>
+    </div>
     <div class="custom-shape-divider-bottom-1676197177">
         <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
             <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
         </svg>
     </div>
-</section>
-
-<section id="about" class="project-section position-relative">
-    <div class="container px-4 py-4 text-center">
-        <h3 class="display-5">Projects</h3>
-        <div class="seperator">
-            <span class="outer-line"></span>
-            <span class="fa-solid fa-bolt" aria-hidden="true"></span>
-            <span class="outer-line"></span>
-        </div>
-
-    </div>
-
 </section>
 
 
@@ -167,3 +184,4 @@
 @code {
     //create list a services
 }
+

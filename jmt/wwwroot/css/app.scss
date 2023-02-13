@@ -11,7 +11,9 @@
     --darkgray: #6b7e86;
     --lightbg: #f5f5f5;
     --slateblue:#7393B3;
+}
 
+html {
     scroll-behavior: smooth;
 }
 
@@ -259,48 +261,96 @@ a.nav-link.active {
 
     .founder-img {
         max-width: 60%;
+        border:2px solid var(--white);
     }
 }
+
+
 /*#endregion */
 
 /*#region projects section */
 .project-section {
-    //background: var(--white);
-    //color: var(--black);
+    background: var(--primary-dark);
+    color: var(--black);
 
-    //h3 {
-    //    font-size: 30px;
-    //    font-weight: 500;
-    //    color: var(--black);
-    //}
+    h3 {
+        font-size: 30px;
+        font-weight: 500;
+        color: var(--black);
+    }
 
-    //.seperator {
-    //    text-align: center;
+    .seperator {
+        text-align: center;
 
-    //    span {
-    //        display: inline-block;
-    //        vertical-align: middle;
-    //    }
+        span {
+            display: inline-block;
+            vertical-align: middle;
+        }
 
-    //    .outer-line {
-    //        width: 40%;
-    //        border-bottom: 3px solid var(--black);
-    //    }
-    //}
+        .outer-line {
+            width: 40%;
+            border-bottom: 3px solid var(--black);
+        }
+    }
+
+    .insta-frame{
+        width:100%;
+        height:auto;
+    }
+}
+/*#endregion */
+
+/*#region Carousel */
+.carousel {
+    .carousel-indicators li {
+        width: 10px;
+        height: 10px;
+        margin-left: 5px;
+        margin-right: 5px;
+        background-color: var(--white) !important;
+        border-radius: 50%;
+    }
+
+    .carousel-item {
+        i {
+            font-size: 30px;
+        }
+    }
+}
+/*#endregion */
+
+/*#region Testimonial section */
+.testimonal-section {
+    background: linear-gradient(to bottom, rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url("/img/testimonial2.jpg") center no-repeat;
+    background-size: cover;
+
+    h3 {
+        font-size: 30px;
+        font-weight: 500;
+        color: var(--white);
+    }
+    .card{
+        background:transparent !important;
+    }
 }
 /*#endregion */
 
 
+.footer {
+/*    background: var(--primary-dark) !important;
+    color: var(--black);*/
+}
 
 /*#region Media queries */
-
 @media (min-width: 768px) {
     .hero h3 {
         font-size: 32px;
     }
+
     .hero .highlight {
         font-size: 28px;
     }
+
     .hero p {
         font-size: 22px;
     }

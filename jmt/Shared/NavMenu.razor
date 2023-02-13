@@ -25,11 +25,11 @@
                     <span aria-hidden="true"></span> Services
                 </NavLink>
 
-                <NavLink class="nav-link px-2" href="about">
+                <NavLink class="nav-link px-2" href="#about">
                     <span aria-hidden="true"></span> About
                 </NavLink>
 
-                <NavLink class="nav-link px-2" href="projects">
+                <NavLink class="nav-link px-2" href="#projects">
                     <span aria-hidden="true"></span> Projects
                 </NavLink>
 
@@ -40,12 +40,15 @@
         </div>
 
         <div class="d-md-flex col-md justify-content-md-end">
-            <a class="px-1 text-light text-decoration-none">
-                <i class="fa-brands fa-instagram fa-lg fa-shake"></i>
-            </a>
-            <a class="px-1 text-light text-decoration-none">
-                <i class="fa-brands fa-facebook fa-lg fa-shake"></i>
+            <a type="button" class="px-1 text-light text-decoration-none" @onclick="LaunchInstagram">
+                <i class="fa-brands fa-instagram fa-lg fa-bounce"></i>
             </a>
         </div>
     </div>
-</nav>              
+</nav>
+@code
+{
+    private void LaunchInstagram()
+    {
+    }
+}
