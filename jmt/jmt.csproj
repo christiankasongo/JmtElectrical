@@ -22,9 +22,6 @@
 	<ItemGroup>
 	  <None Include="wwwroot\css\app.scss" />
 	</ItemGroup>
-	<ItemGroup>
-	  <Folder Include="Components\" />
-	</ItemGroup>
 
 	<Target Name="BuildCssDev" Condition="'$(Configuration)' == 'Debug'" BeforeTargets="Build">
 		<Exec Command="npm run sass" />
