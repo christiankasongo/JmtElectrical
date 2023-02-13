@@ -13,6 +13,11 @@
     --slateblue:#7393B3;
 }
 
+* {
+    margin: 0;
+    padding: 0;
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -269,34 +274,11 @@ a.nav-link.active {
 /*#endregion */
 
 /*#region projects section */
+
 .project-section {
-    background: var(--primary-dark);
-    color: var(--black);
-
-    h3 {
-        font-size: 30px;
-        font-weight: 500;
-        color: var(--black);
-    }
-
-    .seperator {
-        text-align: center;
-
-        span {
-            display: inline-block;
-            vertical-align: middle;
-        }
-
-        .outer-line {
-            width: 40%;
-            border-bottom: 3px solid var(--black);
-        }
-    }
-
-    .insta-frame{
-        max-width:100%;
-    }
+    background-color: var(--lightbg);
 }
+
 /*#endregion */
 
 /*#region Carousel */
@@ -334,10 +316,42 @@ a.nav-link.active {
 }
 /*#endregion */
 
+/*#region Contact Section */
+.contact-section {
+
+    h3 {
+        font-size: 30px;
+    }
+
+    .seperator {
+        text-align: center;
+
+        span {
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .outer-line {
+            width: 40%;
+            border-bottom: 3px solid var(--white);
+        }
+    }
+
+    p {
+        font-size: 16px;
+    }
+}
+/*#endregion */
+
 
 .footer {
-/*    background: var(--primary-dark) !important;
-    color: var(--black);*/
+    span {
+        font-size: 14px;
+    }
+
+    .creator {
+        font-size: 14px;
+    }
 }
 
 /*#region Media queries */
@@ -357,10 +371,6 @@ a.nav-link.active {
 
 
 /*#endregion */
-
-
-
-
 
 
 /*#region Change name */
