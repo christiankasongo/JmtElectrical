@@ -244,28 +244,49 @@ a.nav-link.active {
 
 /*#region About section */
 .about-section {
-    background: var(--white);
+    background-color: var(--lightbg);
     color: var(--black);
 
     h3 {
         font-size: 30px;
-        font-weight:500;
+        font-weight: 500;
         color: var(--black);
     }
 
-    .seperator {
-        text-align: center;
-
-        span {
-            display: inline-block;
-            vertical-align: middle;
-        }
-
-        .outer-line {
-            width: 40%;
-            border-bottom: 3px solid var(--black);
-        }
+    h6 {
+        color: var(--black);
     }
+
+    .founder-img {
+        max-width: 60%;
+    }
+}
+/*#endregion */
+
+/*#region projects section */
+.project-section {
+    //background: var(--white);
+    //color: var(--black);
+
+    //h3 {
+    //    font-size: 30px;
+    //    font-weight: 500;
+    //    color: var(--black);
+    //}
+
+    //.seperator {
+    //    text-align: center;
+
+    //    span {
+    //        display: inline-block;
+    //        vertical-align: middle;
+    //    }
+
+    //    .outer-line {
+    //        width: 40%;
+    //        border-bottom: 3px solid var(--black);
+    //    }
+    //}
 }
 /*#endregion */
 
