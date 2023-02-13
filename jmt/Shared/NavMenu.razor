@@ -1,9 +1,12 @@
-﻿<nav class="navbar navbar-expand-md bg-dark shadow-sm">
+﻿@inject IJSRuntime jsRuntime
+
+<nav class="navbar navbar-expand-md bg-dark shadow-sm">
     <div class="container">
 
         <button class="btn-primary-outline d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExpand">
             <i class="fa-solid fa-bars fa-lg"></i>
         </button>
+
 
         <a class="d-md-none mx-auto navbar-brand" href="">
             <img height="48" role="img" src="img/logo.png" alt="JMT Logo" />
@@ -29,26 +32,16 @@
                     <span aria-hidden="true"></span> About
                 </NavLink>
 
-                <NavLink class="nav-link px-2" href="#projects">
-                    <span aria-hidden="true"></span> Projects
-                </NavLink>
-
-                <NavLink class="nav-link px-2" href="contact">
+                <NavLink class="nav-link px-2" href="#contact">
                     <span aria-hidden="true"></span> Contact
                 </NavLink>
             </ul>
         </div>
 
         <div class="d-md-flex col-md justify-content-md-end">
-            <a type="button" class="px-1 text-light text-decoration-none" @onclick="LaunchInstagram">
+            <a type="button" class="px-1 text-light text-decoration-none" href="https://www.instagram.com/jmt_electrical/" target="_blank">
                 <i class="fa-brands fa-instagram fa-lg fa-bounce"></i>
             </a>
         </div>
     </div>
 </nav>
-@code
-{
-    private void LaunchInstagram()
-    {
-    }
-}

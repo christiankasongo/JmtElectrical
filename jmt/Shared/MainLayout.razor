@@ -6,8 +6,30 @@
 <main>
     @Body
 </main>
-<footer class="footer mt-auto py-3">
-    <div class="container">
-        <span class="text-muted">Place sticky footer content here.</span>
-    </div>
+<footer class="footer mt-auto py-1">
+    <div class="container text-center">
+        <div class="d-flex flex-md-row justify-content-between">
+            <div class="p-2">
+                <span class="text-muted">&copy; @date JMT Electrical</span>
+            </div>
+            <div class="p-2 creator">
+                Created by Christian Kasongo
+                <a href="https://github.com/christiankasongo" target="_blank" type="button" class="px-1 text-light text-decoration-none">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/christian-kasongo-269a84196" target="_blank" type="button" class="px-1 text-light text-decoration-none">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+            </div>
+            </div>
+        </div>
 </footer>
+
+@code{
+    public int date;
+
+    protected override async void OnInitialized()
+    {
+        date = DateTime.Today.Year;
+    }
+}
