@@ -34,6 +34,10 @@ i {
     color: var(--lightbg);
 }
 
+*[id] {
+    scroll-margin-top: 5rem;
+}
+
 /*#region Component Setup */
 
 .btn {
@@ -67,20 +71,6 @@ i {
     color: var(--white);
     background-color: var(--secondary-dark);
 }
-
-
-//.btn-primary,
-//btn-outline-secondary,
-//btn-outline-primary {
-//    padding: 12px 20px;
-//}
-//.btn-primary {
-//    background-color: var(--primary);
-//    .btn-primary:hover {
-//        background-color: var(--primary-dark);
-//    }
-//}
-
 
 /*#endregion */
 

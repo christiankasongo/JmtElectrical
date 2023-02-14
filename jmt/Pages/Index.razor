@@ -9,11 +9,11 @@
         <div class="col-lg-6 mx-auto">
             <p class="lead mb-4">A easy choice for all your domestic electrical solutions</p>
             <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-                <button type="button" class="btn btn-outline-primary btn-md px-4 gap-3 fw-bold">About Us</button>
-                <button type="button" class="btn btn-outline-secondary btn-md px-4 fw-bold">
+                <a href="#about" type="button" class="btn btn-outline-primary btn-md px-4 gap-3 fw-bold">About Us</a>
+                <a href="tel:+0701234567" type="button" class="btn btn-outline-secondary btn-md px-4 fw-bold">
                     <i class="fa-sharp fa-solid fa-phone fa-lg"></i>
                     0701234567
-                </button>
+                </a>
             </div>
         </div>
     </div>
@@ -140,7 +140,7 @@
     </div>
 </section>
 
-<section id="projects" class="project-section">
+<section class="project-section">
     <div class="container px-4 py-4 text-center">
         <div class="elfsight-app-946ae9d9-dfec-45e4-84b2-970537d8d628"></div>
     </div>
@@ -152,7 +152,7 @@
 
         <div class="card border-0">
             <div class="card-body px-3 py-3">
-                <Testimonials/>
+                <Testimonials />
             </div>
         </div>
     </div>
@@ -163,7 +163,7 @@
     </div>
 </section>
 
-<section id="projects" class="contact-section">
+<section id="contact" class="contact-section">
     <div class="container px-4 py-4">
         <h3 class="display-5 text-center">Contact Us</h3>
         <div class="seperator mb-4">
@@ -176,11 +176,13 @@
             <div class="col">
                 <p>
                     Please call, email or get in touch via the website to discuss all of your electrical needs.
-                    <br />
-                    <strong>jmtElectrical@hotmail.com</strong>
-                    <br />
-                    <a type="button" class="px-1 text-light text-decoration-none" @onclick="MakeACall">0701234567</a>
                 </p>
+                <div class="contact-dets mb-2 pt-1">
+                    <a type="button" class="px-1 text-light text-decoration-none" href="mailto:jmtElectrical@hotmail.com">jmtElectrical@hotmail.com</a>
+                    <br/>
+                    <a type="button" class="px-1 text-light text-decoration-none" href="tel:+0701234567">0701234567</a>
+                </div>
+
                 <p>
                     We take pride in providing high quality electrical services with a focus on reliability, honesty and safety.
                 </p>
@@ -199,7 +201,7 @@
                         <textarea class="form-control" id="form4Example3" rows="4"></textarea>
                         <label class="form-label" for="form4Example3">Message</label>
                     </div>
-                    <button type="submit" class="btn btn-outline-primary btn-block">Send</button>s
+                    <button type="submit" class="btn btn-outline-primary btn-block">Send</button>
                 </form>
             </div>
         </div>
@@ -210,14 +212,12 @@
 
 @*https://www.luroxelectrical.co.uk/*@
 
-
-
 @code {
     //create list a services
 
     public void MakeACall()
-{
+    {
 
-}
+    }
 }
 
