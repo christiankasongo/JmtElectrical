@@ -24,6 +24,7 @@ html {
 
 body {
     font-family: 'Nunito', sans-serif;
+    overflow-y: scroll
 }
 
 img {
@@ -35,7 +36,7 @@ i {
 }
 
 *[id] {
-    scroll-margin-top: 5rem;
+    scroll-margin-top: 2rem;
 }
 
 /*#region Component Setup */

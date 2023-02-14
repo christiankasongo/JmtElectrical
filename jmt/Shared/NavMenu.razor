@@ -22,19 +22,19 @@
 
             <ul class="navbar-nav col-md justify-content-md-center">
 
-                <NavLink class="nav-link px-2" href="@GetId("")" Match="NavLinkMatch.All">
+                <NavLink class="nav-link px-2" href="" Match="NavLinkMatch.All">
                     <span aria-hidden="true"></span> Home
                 </NavLink>
 
-                <NavLink class="nav-link px-2" href="@GetId("#services")">
+                <NavLink class="nav-link px-2" href="#services">
                     <span aria-hidden="true"></span> Services
                 </NavLink>
 
-                <NavLink class="nav-link px-2" href="@GetId("#about")">
+                <NavLink class="nav-link px-2" href="#about">
                     <span aria-hidden="true"></span> About
                 </NavLink>
 
-                <NavLink class="nav-link px-2" href="@GetId("#contact")">
+                <NavLink class="nav-link px-2" href="#contact">
                     <span aria-hidden="true"></span> Contact
                 </NavLink>
             </ul>
@@ -48,6 +48,7 @@
     </div>
 </nav>
 @code
+
 {
     protected override void OnInitialized()
     {
@@ -67,6 +68,7 @@
     private async void OnLocationChanged(object sender, LocationChangedEventArgs e)
     {
         await ScrollToFragment();
+        StateHasChanged();
     }
 
     private async Task ScrollToFragment()
