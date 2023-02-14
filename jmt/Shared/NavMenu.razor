@@ -1,4 +1,6 @@
 ﻿@inject IJSRuntime jsRuntime
+@inject NavigationManager NavigationManager
+@implements IDisposable
 
 <nav class="navbar navbar-expand-md bg-dark shadow-sm">
     <div class="container">
@@ -20,19 +22,19 @@
 
             <ul class="navbar-nav col-md justify-content-md-center">
 
-                <NavLink class="nav-link px-2" href="" Match="NavLinkMatch.All">
+                <NavLink class="nav-link px-2" href="@GetId("")" Match="NavLinkMatch.All">
                     <span aria-hidden="true"></span> Home
                 </NavLink>
 
-                <NavLink class="nav-link px-2" href="#services">
+                <NavLink class="nav-link px-2" href="@GetId("#services")">
                     <span aria-hidden="true"></span> Services
                 </NavLink>
 
-                <NavLink class="nav-link px-2" href="#about">
+                <NavLink class="nav-link px-2" href="@GetId("#about")">
                     <span aria-hidden="true"></span> About
                 </NavLink>
 
-                <NavLink class="nav-link px-2" href="#contact">
+                <NavLink class="nav-link px-2" href="@GetId("#contact")">
                     <span aria-hidden="true"></span> Contact
                 </NavLink>
             </ul>
@@ -40,8 +42,58 @@
 
         <div class="d-md-flex col-md justify-content-md-end">
             <a type="button" class="px-1 text-light text-decoration-none" href="https://www.instagram.com/jmt_electrical/" target="_blank">
-                <i class="fa-brands fa-instagram fa-lg fa-bounce"></i>
+                <i class="fa-brands fa-instagram fa-lg"></i>
             </a>
         </div>
     </div>
 </nav>
+@code
+{
+    protected override void OnInitialized()
+    {
+        NavigationManager.LocationChanged += OnLocationChanged;
+    }
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        await ScrollToFragment();
+    }
+
+    public void Dispose()
+    {
+        NavigationManager.LocationChanged -= OnLocationChanged;
+    }
+
+    private async void OnLocationChanged(object sender, LocationChangedEventArgs e)
+    {
+        await ScrollToFragment();
+    }
+
+    private async Task ScrollToFragment()
+    {
+        var uri = new Uri(NavigationManager.Uri, UriKind.Absolute);
+        var fragment = uri.Fragment;
+        if (fragment.StartsWith('#'))
+        {
+    // Handle text fragment (https://example.org/#test:~:text=foo)
+    // https://github.com/WICG/scroll-to-text-fragment/
+            var elementId = fragment.Substring(1);
+            var index = elementId.IndexOf(":~:", StringComparison.Ordinal);
+            if (index > 0)
+            {
+                elementId = elementId.Substring(0, index);
+            }
+
+            if (!string.IsNullOrEmpty(elementId))
+            {
+                await jsRuntime.InvokeVoidAsync("BlazorScrollToId", elementId);
+            }
+        }
+    }
+
+    public string GetId(string sectionId)
+    {
+        return sectionId;
+    }
+
+}
