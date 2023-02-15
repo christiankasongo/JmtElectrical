@@ -10,9 +10,9 @@
             <p class="lead mb-4">A easy choice for all your domestic electrical solutions</p>
             <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
                 <a href="#about" type="button" class="btn btn-outline-primary btn-md px-4 gap-3 fw-bold">About Us</a>
-                <a href="tel:+0701234567" type="button" class="btn btn-outline-secondary btn-md px-4 fw-bold">
+                <a href="tel:+@_mobileNumber" type="button" class="btn btn-outline-secondary btn-md px-4 fw-bold">
                     <i class="fa-sharp fa-solid fa-phone fa-lg"></i>
-                    0701234567
+                    @_mobileNumber
                 </a>
             </div>
         </div>
@@ -128,9 +128,7 @@
         <h3 class="display-5 mb-3">About Us</h3>
         <div class="row g-2 row-cols-1 row-cols-lg-2 align-items-center">
             <div class="col">
-                <p>
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
-                </p>
+                <p>@_aboutUs</p>
             </div>
             <div class="col">
                 <img src="/img/example.jpg" class="founder-img mb-2" alt="JMT Electrical founder" />
@@ -178,9 +176,9 @@
                     Please call, email or get in touch via the website to discuss all of your electrical needs.
                 </p>
                 <div class="contact-dets mb-2 pt-1">
-                    <a type="button" class="px-1 text-light text-decoration-none" href="mailto:jmtElectrical@hotmail.com">jmtElectrical@hotmail.com</a>
+                    <a type="button" class="px-1 text-light text-decoration-none" href="mailto:@_emailAddress">@_emailAddress</a>
                     <br/>
-                    <a type="button" class="px-1 text-light text-decoration-none" href="tel:+0701234567">0701234567</a>
+                    <a type="button" class="px-1 text-light text-decoration-none" href="tel:+@_mobileNumber">@_mobileNumber</a>
                 </div>
 
                 <p>
@@ -188,26 +186,31 @@
                 </p>
             </div>
             <div class="col">
-                <form>
+                <EditForm Model="@_messageCreditials" OnValidSubmit="Submit">
+                    <DataAnnotationsValidator />
                     <div class="form-outline mb-2">
-                        <input type="text" id="form4Example1" class="form-control" />
+                        <InputText @bind-Value="_messageCreditials.Name" type="text" id="form4Example1" class="form-control"/>
                         <label class="form-label" for="form4Example1">Name</label>
+                        <ValidationMessage For="() => _messageCreditials.Name" />
                     </div>
+
                     <div class="form-outline mb-2">
-                        <input type="email" id="form4Example2" class="form-control" />
+                        <InputText @bind-Value="_messageCreditials.Email" type="email" id="form4Example2" class="form-control"/>
                         <label class="form-label" for="form4Example2">Email address</label>
+                        <ValidationMessage For="() => _messageCreditials.Email" />
                     </div>
                     <div class="form-outline mb-2">
-                        <textarea class="form-control" id="form4Example3" rows="4"></textarea>
+                        <InputTextArea @bind-Value="_messageCreditials.Message" class="form-control" id="form4Example3" rows="4"></InputTextArea>
                         <label class="form-label" for="form4Example3">Message</label>
+                        <ValidationMessage For="() => _messageCreditials.Message" />
                     </div>
                     <button type="submit" class="btn btn-outline-primary btn-block">Send</button>
-                </form>
+                </EditForm>
+                <p>@EmailSentMessage</p>
             </div>
         </div>
 
     </div>
-
 </section>
 
 @*https://www.luroxelectrical.co.uk/*@
