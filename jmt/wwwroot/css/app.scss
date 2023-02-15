@@ -36,7 +36,7 @@ i {
 }
 
 *[id] {
-    scroll-margin-top: 2rem;
+    scroll-margin-top: 5rem;
 }
 
 /*#region Component Setup */
@@ -116,6 +116,9 @@ a.nav-link.active {
     color: var(--primary) !important;
 }
 
+.offcanvas-title{
+    font-size:18px;
+}
 /*show and hide logo*/
 @media all and (max-width: 767px) {
     .hidden-mobile {
