@@ -44,7 +44,7 @@
         </div>
 
         <div>
-            <a type="button" class="px-1 text-light text-decoration-none" href="https://www.instagram.com/jmt_electrical/" target="_blank">
+            <a type="button" class="px-1 text-light text-decoration-none" href=@jmtInstagram target="_blank">
                 <i class="fa-brands fa-instagram fa-lg"></i>
             </a>
         </div>
@@ -55,6 +55,7 @@
 @code
 
 {
+    public string jmtInstagram = "https://www.instagram.com/jmt_electrical/";
     protected override void OnInitialized()
     {
         NavigationManager.LocationChanged += OnLocationChanged;
@@ -82,8 +83,6 @@
         var fragment = uri.Fragment;
         if (fragment.StartsWith('#'))
         {
-    // Handle text fragment (https://example.org/#test:~:text=foo)
-    // https://github.com/WICG/scroll-to-text-fragment/
             var elementId = fragment.Substring(1);
             var index = elementId.IndexOf(":~:", StringComparison.Ordinal);
             if (index > 0)

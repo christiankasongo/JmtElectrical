@@ -1,55 +1,60 @@
 ﻿<div id="carouselLight" class="carousel slide" data-bs-ride="carousel">
 
-        @*foreach loop through the amount of testimonials and create a button and a card*@
-        <ol class="carousel-indicators mb-0">
-            <li data-bs-target="#carouselLight" data-bs-slide-to="0" class="active"></li>
-            <li data-bs-target="#carouselLight" data-bs-slide-to="1"></li>
-            <li data-bs-target="#carouselLight" data-bs-slide-to="2"></li>
-        </ol>
+    <ol class="carousel-indicators mb-0">
+        @for (int i = 0; i < testimonils.Count; i++)
+        {
+            var slideNum = Convert.ToString(i);
+            if (i.Equals(0))
+            {
+                <li data-bs-target="#carouselLight" data-bs-slide-to=@slideNum class="active"></li>
+            }
+            else
+            {
+                <li data-bs-target="#carouselLight" data-bs-slide-to=@slideNum></li>
+            }
+        }
+    </ol>
 
     <div class="carousel-inner pb-5">
-
-        <div class="carousel-item active">
-            <div class="row d-flex justify-content-center">
-                <div class="text-center">
-                    <i class="fa-solid fa-comments pt-2"></i>
-                    <h5>First slide label</h5>
-                    <p>
-                        The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested.
-                    </p>
-                </div>
-            </div>
-        </div>
-
-        <div class="carousel-item">
-            <div class="row d-flex justify-content-center">
-                <div class="text-center">
-                    <i class="fa-solid fa-comments pt-2"></i>
-                    <h5>Second slide label</h5>
-                    <p>
-                        The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested.
-                    </p>
-                </div>
-            </div>
-        </div>
-
-        <div class="carousel-item">
-            <div class="row d-flex justify-content-center">
+        @foreach (var testimonial in testimonils)
+        {
+            <div class="carousel-item @testimonial.FirstSlide">
                 <div class="row d-flex justify-content-center">
                     <div class="text-center">
                         <i class="fa-solid fa-comments pt-2"></i>
-                        <h5>Third slide label</h5>
+                        <h5>@testimonial.Name</h5>
                         <p>
-                            The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested.
+                            @testimonial.Comment
                         </p>
                     </div>
                 </div>
             </div>
-        </div>
-
+        }
     </div>
 </div>
 
 @code {
 
+    public class Testimonial
+    {
+        public string? FirstSlide { get; set; }
+        public string? Name { get; set; }
+        public string? Comment { get; set; }
+    }
+
+    public List<Testimonial> testimonils = new();
+
+    protected override void OnInitialized()
+    {
+        PopulateInformation();
+        StateHasChanged();
+    }
+
+    public void PopulateInformation()
+    {
+        testimonils.Add(new Testimonial { FirstSlide = "active", Name = "Sam Matt", Comment = "The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested." });
+        testimonils.Add(new Testimonial { Name = "Zack Mathew", Comment = "The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested." });
+        testimonils.Add(new Testimonial { Name = "Mike Tompson", Comment = "The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested." });
+        testimonils.Add(new Testimonial { Name = "Peter Crouch", Comment = "The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested." });
+    }
 }
