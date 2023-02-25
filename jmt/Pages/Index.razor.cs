@@ -7,13 +7,14 @@ namespace jmt.Pages
 {
     public partial class Index : ComponentBase
     {
-        public List<string> ServiceList = new();
-        private string _aboutUs;
+        public List<string> ServiceLstOne = new();
+        public List<string> ServiceLstTwo = new();
+        private string? _aboutUs;
         public Dictionary<string, string> Testimonials = new();
-        private string _emailAddress;
+        private string? _emailAddress;
         private int _mobileNumber;
 
-        public string EmailSentMessage;
+        public string? EmailSentMessage;
 
         private MessageCreditials _messageCreditials = new();
 
@@ -29,6 +30,19 @@ namespace jmt.Pages
             _aboutUs = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.";
             _emailAddress = "jmtelectrical@hotmail.com";
             _mobileNumber = 0701234567;
+
+            GetServices();
+        }
+
+        public void GetServices() {
+
+            ServiceLstOne.Add("A simple default list group item");
+            ServiceLstOne.Add("A simple default list group item");
+            ServiceLstOne.Add("A simple default list group item");
+
+            ServiceLstTwo.Add("A simple default list group item");
+            ServiceLstTwo.Add("A simple default list group item");
+            ServiceLstTwo.Add("A simple default list group item");
         }
 
         public async Task Submit()

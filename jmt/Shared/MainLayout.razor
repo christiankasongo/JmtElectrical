@@ -13,11 +13,11 @@
                 <span class="text-muted">&copy; @date JMT Electrical</span>
             </div>
             <div class="p-2 creator">
-                Created by Christian K
-                <a href="https://github.com/christiankasongo" target="_blank" type="button" class="px-1 text-light text-decoration-none">
+                Created by CK
+                <a href=@ckGithub target="_blank" type="button" class="px-1 text-light text-decoration-none">
                     <i class="fa-brands fa-github"></i>
                 </a>
-                <a href="https://www.linkedin.com/in/christian-kasongo-269a84196" target="_blank" type="button" class="px-1 text-light text-decoration-none">
+                <a href=@ckLinkedIn target="_blank" type="button" class="px-1 text-light text-decoration-none">
                     <i class="fa-brands fa-linkedin"></i>
                 </a>
             </div>
@@ -27,6 +27,8 @@
 
 @code{
     public int date;
+    public string ckLinkedIn = "https://www.linkedin.com/in/christian-kasongo-269a84196";
+    public string ckGithub = "https://github.com/christiankasongo";
 
     protected override async void OnInitialized()
     {

@@ -10,7 +10,7 @@
     --lightgray: #ebebeb;
     --darkgray: #6b7e86;
     --lightbg: #f5f5f5;
-    --slateblue:#7393B3;
+    --slateblue: #7393B3;
 }
 
 * {
@@ -24,7 +24,7 @@ html {
 
 body {
     font-family: 'Nunito', sans-serif;
-    overflow-y: scroll
+    overflow-y: scroll;    
 }
 
 img {
@@ -43,14 +43,13 @@ i {
 
 .btn {
     border-radius: 8px;
-    color:var(--white);
+    color: var(--white);
 }
 
-.btn-outline-primary{
-    border-color:var(--primary-dark);
-    color:var(--primary);
-
-    --bs-btn-active-bg:var(--primary);
+.btn-outline-primary {
+    border-color: var(--primary-dark);
+    color: var(--primary);
+    --bs-btn-active-bg: var(--primary);
     --bs-btn-active-border-color: var(--primary);
 }
 
@@ -75,16 +74,14 @@ i {
 
 /*#endregion */
 
-
 /*#region Page Loader*/
-#app-splash-screen {
+.app-splash-screen {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 999999;
-    pointer-events: none;
+    z-index: 200;
 
     .logo-div {
         position: fixed;
@@ -94,6 +91,32 @@ i {
         margin: 0 auto;
     }
 }
+
+.app-splash-screen.display-none {
+    position: fixed;
+    opacity:0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -10;
+    transition: all 0.5s;
+}
+
+@keyframes FadeOut{
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+.fade-out{
+    opacity:1;
+    animation:FadeOut 0.8s ease-out backwards;
+}
+
 
 /*#endregion */
 
@@ -116,8 +139,8 @@ a.nav-link.active {
     color: var(--primary) !important;
 }
 
-.offcanvas-title{
-    font-size:18px;
+.offcanvas-title {
+    font-size: 18px;
 }
 /*show and hide logo*/
 @media all and (max-width: 767px) {
@@ -260,7 +283,7 @@ a.nav-link.active {
 
     .founder-img {
         max-width: 60%;
-        border:2px solid var(--white);
+        border: 2px solid var(--white);
     }
 }
 
@@ -304,8 +327,9 @@ a.nav-link.active {
         font-weight: 500;
         color: var(--white);
     }
-    .card{
-        background:transparent !important;
+
+    .card {
+        background: transparent !important;
     }
 }
 /*#endregion */
@@ -337,7 +361,6 @@ a.nav-link.active {
 }
 /*#endregion */
 
-
 .footer {
     span {
         font-size: 14px;
@@ -350,6 +373,12 @@ a.nav-link.active {
 
 /*#region Media queries */
 @media (min-width: 768px) {
+
+    .hero {
+        background: linear-gradient(to bottom, rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url("/img/testimonial.jpg") center no-repeat;
+        background-size: cover;
+    }
+
     .hero h3 {
         font-size: 32px;
     }
@@ -365,12 +394,6 @@ a.nav-link.active {
 
 
 /*#endregion */
-
-
-/*#region Change name */
-/*#endregion */
-
-
 
 /*#region Blazor defualt styling */
 .valid.modified:not([type=checkbox]) {
@@ -413,4 +436,7 @@ a.nav-link.active {
 .blazor-error-boundary::after {
     content: "An error has occurred."
 }
+/*#endregion */
+
+/*#region Change name */
 /*#endregion */
